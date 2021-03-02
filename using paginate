@@ -1,0 +1,12 @@
+const mongoose         = require('mongoose');
+const mongoosePaginate = require('mongoose-paginate-v2');
+
+const mySchema = new mongoose.Schema({ 
+  /* your schema definition */ 
+});
+
+mySchema.plugin(mongoosePaginate);
+
+const myModel = mongoose.model('SampleModel',  mySchema); 
+
+myModel.paginate().then({}) // Usage
